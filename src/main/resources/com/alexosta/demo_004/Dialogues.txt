@@ -1,30 +1,34 @@
-Man ir vajadzīga palīdzība ar šo piemēru.
-Es esmu neizpratnē par šo matemātisko izteicienu.
-Vai jūs, lūdzu, varētu man pateikt, kāds ir šīs izteiksmes rezultāts?
-Es neesmu pārliecināts, kā atrisināt šo piemēru. Vai jūs varat man palīdzēt?
-Man ir nepieciešama jūsu palīdzība ar atbildi, lūdzu.
-Es nevaru saprast, kā iegūt pareizo atbildi uz šo piemēru.
-Labdien, man ir nepieciešams šī piemēra skaidrojums, es nevaru atrast atbildi.
-Es nesaprotu, kā atrisināt šo uzdevumu.
-Vai jūs, lūdzu, varētu man palīdzēt ar šo piemēru?
-Man ir nepieciešams jūsu skaidrojums par šo izteicienu.
-Es nevaru atrast pareizo atbildi šim piemēram, lūdzu, palīdziet man.
-Man ir jāsaprot, kā atrisināt šo matemātikas piemēru.
-Dodiet man atbildi!
-Es nesaprotu.
-Jūs esat devuši pārāk sarežģītas problēmas, es to neatrisināšu!
+Es pareizi atbildēju?
+Kāda ir atbilde šajā piemērā?
+Es neesmu pārliecināts par atbildi, pārbaudīsiet?
+Palīdziet man izvelētie pareizo atbildi?
+Kāpēc ir tāda atbilde?
+Iedod lūdzu man atbildi!
+Loti grūts piemērs, palīdziet!
 Gandrīz pabeigts...
-Mamma saka, ja nezini atbildi uz kādu jautājumu, noskaidro to no gudrā tēvoča.
+Grāmatā ir pareiza atbilde?
 Es steidzos, uzraksti man atbildi.
-Es nebiju pēdējā stundā, lūdzu, pastāstiet man atbildi.
-Skolotāj, es jums došu naudu
+Skolotāj, es jums došu naudu par pareizo atbildi :)
 Ak, es aizmirsu uzrakstīt atbildi
 Skolotāj, man ir grūti saprast...
-Es jums samaksāšu tagad
-Mans tētis ir policists.
+Man ir pareiza atbilde?
+Aleksandr, palīdzi man ar so piemēru.
 Skolotāj, man vajag atbildi, lūdzu.
-Es esmu stulbs.
-Kāda gara rinda, es esmu noguris.
+Es esmu stulbs, nezinu atbildi.
+Neesmu pārliecināts par savu atbildi.
 Kad būsiet pārbaudījis, zvaniet man atpakaļ.
-Man vairs nav pildspalvas.
-Vai jūs zināt atbildi, skolotāj?
+Man beidzās pildspalva, uzrakstiet manā vietā.
+Variet, lūdzu, pārbaudīt manu darbu?
+Es ticu, ka esmu pareizi atbildējis. Vai varat to pārbaudīt?
+Kāda ir pareizā atbilde šajā uzdevumā?
+Es neesmu pārliecināts par savu atbildi. Vai jūs varētu to pārbaudīt?
+Es nevaru saprast, kā atrisināt šo uzdevumu. Vai jūs varētu man palīdzēt?
+Vai jūs varat ieteikt pareizo risinājumu šim uzdevumam?
+Es neesmu drošs par savu atbildi. Vai jūs varētu pārbaudīt, vai tā ir pareiza?
+Vai jūs varētu atzīmēt manu darbu?
+Vai es varētu saņemt atsauksmes par manu darbu, Ser?
+Vai jūs varētu man pateikt, kur es esmu pieļāvis kļūdu?
+Vai es varētu saņemt atgriezenisko saiti par šo uzdevumu?
+Vai jūs varat paskaidrot, kā es varētu uzlabot savu darbu?
+Vai jūs varat sniegt man komentāru par manu darbu?
+Vai jūs varētu sniegt man instrukcijas par to, kā atrisināt šo uzdevumu?

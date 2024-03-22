@@ -7,24 +7,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="600" maxWidth="800" minHeight="400" minWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alexosta.demo_004.GameController">
+<AnchorPane maxHeight="600" maxWidth="800" minHeight="400" minWidth="600" stylesheets="@../demo_004/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alexosta.demo_004.GameController">
    <children>
-      <Label fx:id="timerLabel" layoutX="421.0" layoutY="313.0" prefHeight="54.0" prefWidth="185.0" rotate="-17.5" text="LAIKS: 60:00" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="-10.0">
-         <font>
-            <Font size="31.0" />
-         </font>
-      </Label>
       <HBox fx:id="students_hBox" alignment="TOP_CENTER" layoutX="164.0" layoutY="10.0" prefHeight="30.0" prefWidth="436.0" spacing="10.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <padding>
             <Insets top="10.0" />
          </padding></HBox>
       <VBox alignment="CENTER" layoutX="19.0" layoutY="58.0" prefHeight="304.0" prefWidth="315.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
          <children>
-            <Label fx:id="studentNameLabel" text="Bob" />
+            <Label fx:id="studentNameLabel" text="Bob">
+               <textFill>
+                  <LinearGradient endY="0.44976076555023925" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="0.8626198172569275" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
             <ImageView fx:id="studentImgView" fitHeight="207.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="diaLabel" text="Skolotājs man ir jautājums..." wrapText="true">
+            <Label fx:id="diaLabel" text="Skolotājs man ir jautājums..." textFill="WHITE" wrapText="true">
                <padding>
                   <Insets left="20.0" right="20.0" />
                </padding>
@@ -34,10 +51,30 @@
             <Insets bottom="30.0" left="10.0" />
          </padding>
       </VBox>
-      <VBox layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="161.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="70.0" prefWidth="171.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="lvlLabel" text="LVL 1" />
-            <Label fx:id="studentValueLabel" text="0/10 skolēniem" />
+            <Label fx:id="lvlLabel" text="LVL 1" underline="true">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.40191387559808617" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.38999998569488525" green="1.0" blue="0.4836112856864929" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="studentValueLabel" prefHeight="20.0" prefWidth="119.0" text="Rinda no 10 studentiem " textFill="WHITE" />
+            <Label fx:id="pointsLabel" text="Punkti: 0" textFill="WHITE" />
          </children>
          <padding>
             <Insets left="10.0" top="10.0" />
@@ -45,19 +82,22 @@
       </VBox>
       <VBox alignment="CENTER" layoutX="315.0" layoutY="57.0" prefHeight="344.0" prefWidth="236.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="mathExampleLabel" text="12 + 10 = 22">
+            <Label fx:id="mathExampleLabel" text="12 + 10 = 22" textFill="#fffdd4">
                <font>
-                  <Font size="28.0" />
+                  <Font name="System Bold" size="28.0" />
                </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
             </Label>
             <HBox alignment="CENTER" prefHeight="54.0" prefWidth="100.0" spacing="20.0">
                <children>
-                  <Button fx:id="trueAnswBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="57.0" text="JĀ" textAlignment="CENTER">
+                  <Button fx:id="trueAnswBtn" mnemonicParsing="false" onMouseEntered="#playEnterAnimationBtnTrue" onMouseExited="#playExitAnimationBtnTrue" prefHeight="30.0" prefWidth="57.0" text="JĀ" textAlignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="falseAnswBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="57.0" text="NĒ" textAlignment="CENTER">
+                  <Button fx:id="falseAnswBtn" mnemonicParsing="false" onMouseEntered="#playEnterAnimationBtnFalse" onMouseExited="#playExitAnimationBtnFalse" prefHeight="30.0" prefWidth="57.0" text="NĒ" textAlignment="CENTER">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -67,6 +107,27 @@
                   <Insets top="20.0" />
                </padding>
             </HBox>
+            <Label fx:id="rezultLabel" text="rezultāts - 10 punkti" textFill="#00970d" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="maxRezultLabel" text="labākais rezultāts - 10 punkti" textFill="#00970d" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="timerLabel" alignment="CENTER" prefHeight="45.0" prefWidth="160.0" text=" " textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Cascadia Code Regular" size="36.0" />
+               </font>
+            </Label>
          </children>
          <padding>
             <Insets bottom="65.0" />
