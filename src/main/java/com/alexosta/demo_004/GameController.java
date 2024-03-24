@@ -126,7 +126,7 @@ public class GameController {
     public void setStudents_hBox(PriorityQueue<ClassStudents> students){
         students_hBox.getChildren().clear();
         Iterator<ClassStudents> iterator = students.iterator();
-        for (int i = 0; iterator.hasNext(); i++) {
+        while (iterator.hasNext()) {
             ClassStudents student = iterator.next();
             Label st = new Label(student.getName());
             st.setTextFill(Color.WHITE);

@@ -138,7 +138,7 @@ public class QueueGame extends Application {
 
     private List<String> readLinesFromResource(String fileName) throws IOException {
         List<String> lines = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(fileName)))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(getClass().getResourceAsStream(fileName))))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 lines.add(line);
@@ -162,7 +162,7 @@ public class QueueGame extends Application {
 
         int tmpResult = 0;
         double tmpDivisionResult = 0;
-        String finalResult = "";
+        String finalResult;
         boolean haveDivision = false;
 
         switch (operation) {
@@ -221,12 +221,12 @@ public class QueueGame extends Application {
 
     public void playAudio(String fileName, boolean isLooped, boolean isShortSound, double volume) {
         if (isShortSound) {
-            AudioClip audioClip = new AudioClip(getClass().getResource(fileName).toExternalForm());
+            AudioClip audioClip = new AudioClip(Objects.requireNonNull(getClass().getResource(fileName)).toExternalForm());
             audioClip.play();
             audioClips.put(fileName, audioClip);
             audioClip.setVolume(volume);
         } else {
-            String path = getClass().getResource(fileName).getPath();
+            String path = Objects.requireNonNull(getClass().getResource(fileName)).getPath();
             Media media = new Media(new File(path).toURI().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(media);
             mediaPlayer.setCycleCount(isLooped ? MediaPlayer.INDEFINITE : 1);
