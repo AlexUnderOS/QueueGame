@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f2108ba-04b9-4815-ae1b-e26c9b6de767" name="Changes" comment="demo fart">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/test_sorting.txt" afterDir="false" />
+    <list default="true" id="2f2108ba-04b9-4815-ae1b-e26c9b6de767" name="Changes" comment="code cleanup completed, final demo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/ClassStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/ClassStudents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/QueueGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/QueueGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/WinnerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/winner-scene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/Scores.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,13 +104,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711072245752</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="solved the problem with division">
+      <option name="closed" value="true" />
+      <created>1711295258388</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711295258388</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="new commit" />
     <MESSAGE value="demo fart" />
-    <option name="LAST_COMMIT_MESSAGE" value="demo fart" />
+    <MESSAGE value="solved the problem with division" />
+    <MESSAGE value="code cleanup completed, final demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="code cleanup completed, final demo" />
   </component>
 </project>

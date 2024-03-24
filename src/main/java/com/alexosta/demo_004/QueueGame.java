@@ -12,22 +12,37 @@ import java.io.*;
 import java.util.*;
 public class QueueGame extends Application {
     private GameController controller;
-    private String diaText;
     private int points = 0;
 
-    private static final Map<String, MediaPlayer> mediaPlayers = new HashMap<>();
-    private static final Map<String, AudioClip> audioClips = new HashMap<>();
+    protected static final Map<String, MediaPlayer> mediaPlayers = new HashMap<>();
+    protected static final Map<String, AudioClip> audioClips = new HashMap<>();
 
     private int currentLevel = 1;
 
     private boolean trueAnsw;
 
 
+    private enum Operation {
+        ADDITION("+"),
+        SUBTRACTION("-"),
+        MULTIPLICATION("*"),
+        DIVISION("/");
+
+        private final String symbol;
+
+        Operation(String symbol) {
+            this.symbol = symbol;
+        }
+
+        public String getSymbol() {
+            return symbol;
+        }
+    }
+
     private void increaseLevel() {
         currentLevel++;
         controller.setLevel(currentLevel);
     }
-
     public void setGameController(GameController controller) {
         this.controller = controller;
     }
@@ -81,7 +96,7 @@ public class QueueGame extends Application {
         int maxStudents = 10 + (currentLevel - 1) * 5;
 
         for (int i = 0; i < maxStudents; i++) {
-            String studentName = getRandomLineFromDoc(readLinesFromResource("test_sorting.txt"));
+            String studentName = getRandomLineFromDoc(readLinesFromResource("Students.txt"));
             ClassStudents student = new ClassStudents(studentName);
             students.offer(student);
         }
@@ -138,22 +153,6 @@ public class QueueGame extends Application {
         return lines.get(randomIndex);
     }
 
-    private enum Operation {
-        ADDITION("+"),
-        SUBTRACTION("-"),
-        MULTIPLICATION("*"),
-        DIVISION("/");
-
-        private final String symbol;
-
-        Operation(String symbol) {
-            this.symbol = symbol;
-        }
-
-        public String getSymbol() {
-            return symbol;
-        }
-    }
     public String randomMathExample() {
         Random rand = new Random();
         int a = rand.nextInt(20) + 1;
@@ -243,7 +242,7 @@ public class QueueGame extends Application {
 
 
     public void nextStudentGo(PriorityQueue<ClassStudents> students, GameController controller) throws IOException {
-        diaText = getRandomLineFromDoc(readLinesFromResource("Dialogues.txt"));
+        String diaText = getRandomLineFromDoc(readLinesFromResource("Dialogues.txt"));
         ClassStudents nextStudent = students.poll();
         if (nextStudent != null) {
             String mathExample = randomMathExample();

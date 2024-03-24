@@ -10,11 +10,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Iterator;
+import java.util.Objects;
 import java.util.PriorityQueue;
 
 public class GameController {
@@ -48,66 +45,29 @@ public class GameController {
     @FXML
     private Button trueAnswBtn, falseAnswBtn;
 
-    private final String SCORES_FILE_PATH = "com/alexosta/demo_004/Scores.txt";
-
-
-
-    Image defaultStudentImg;
-
-    void handleTimerFinish() {
+    private CountdownTimer timer;
+    @FXML
+    private void initialize() {
+        QueueGame queueGame = new QueueGame();
+        queueGame.setGameController(this);
+        timer = new CountdownTimer(this);
+        timer.startTimer();
+    }
+    public void setTimerTime(String time) {
+        timerLabel.setText(time);
+    }
+    public void handleTimerFinish() {
         timer.stopTimer();
         disableButtons();
-
-//        int currentPoints = Integer.parseInt(pointsLabel.getText().split(": ")[1].trim());
-
-//        updateMaxScore(currentPoints);
-
-//        rezultLabel.setText("Current Points: " + currentPoints);
-//        maxRezultLabel.setText("Max Score: " + getMaxScore());
+    }
+    public void disableButtons() {
+        trueAnswBtn.setDisable(true);
+        falseAnswBtn.setDisable(true);
     }
 
-    private void updateMaxScore(int currentPoints) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(SCORES_FILE_PATH))) {
-            String line;
-            int maxScore = 0;
-
-            while ((line = reader.readLine()) != null) {
-                int score = Integer.parseInt(line.trim());
-                if (score > maxScore) {
-                    maxScore = score;
-                }
-            }
-
-            if (currentPoints > maxScore) {
-                try (FileWriter writer = new FileWriter("Scores.txt")) {
-                    writer.write(Integer.toString(currentPoints));
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-//    private int getMaxScore() {
-//        try (BufferedReader reader = new BufferedReader(new FileReader(SCORES_FILE_PATH))) {
-//            String line;
-//            int maxScore = 0;
-//
-//            while ((line = reader.readLine()) != null) {
-//                int score = Integer.parseInt(line.trim());
-//                if (score > maxScore) {
-//                    maxScore = score;
-//                }
-//            }
-//            return maxScore;
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            return 0;
-//        }
-//    }
-
+    private Image defaultStudentImg;
     public void setStudentImgForSec(String imgName, double timeAmount) {
-        studentImgView.setImage(new Image(getClass().getResourceAsStream(imgName)));
+        studentImgView.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream(imgName))));
         PauseTransition pause = new PauseTransition(Duration.seconds(timeAmount));
 
         pause.setOnFinished(e -> {
@@ -117,27 +77,22 @@ public class GameController {
 
         pause.play();
     }
-
-    private CountdownTimer timer;
-
-    public void setTimerTime(String time) {
-        timerLabel.setText(time);
-    }
-
-    public void disableButtons() {
-        trueAnswBtn.setDisable(true);
-        falseAnswBtn.setDisable(true);
-    }
-
-
     public void setDefaultStudentImg(String imgName){
-        defaultStudentImg = new Image(getClass().getResourceAsStream(imgName));
+        defaultStudentImg = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imgName)));
         studentImgView.setImage(defaultStudentImg);
     }
-
     public void setStudentValue(int value) {
         studentValueLabel.setText("Rinda no "+value+" st. ");
     }
+
+    public void setLevel(int level) {
+        lvlLabel.setText("LVL: " + level);
+    }
+
+    public void setPoint(int points) {
+        pointsLabel.setText("Punkti: " + points);
+    }
+
     public void playEnterAnimationBtnTrue() {
         animateUsingScaleTransition(getTrueAnswBtn(), 0.1, true);
     }
@@ -152,20 +107,6 @@ public class GameController {
         animateUsingScaleTransition(getFalseAnswBtn(), 0.2, false);
     }
 
-    @FXML
-    private void initialize() {
-        QueueGame queueGame = new QueueGame();
-        queueGame.setGameController(this);
-        timer = new CountdownTimer(this);
-        timer.startTimer();
-    }
-    public void setLevel(int level) {
-        lvlLabel.setText("LVL: " + level);
-    }
-
-    public void setPoint(int points) {
-        pointsLabel.setText("Punkti: " + points);
-    }
 
     public void setStudentName(String name){
         studentNameLabel.setText(name);
@@ -185,7 +126,7 @@ public class GameController {
     public void setStudents_hBox(PriorityQueue<ClassStudents> students){
         students_hBox.getChildren().clear();
         Iterator<ClassStudents> iterator = students.iterator();
-        while (iterator.hasNext()) {
+        for (int i = 0; iterator.hasNext(); i++) {
             ClassStudents student = iterator.next();
             Label st = new Label(student.getName());
             st.setTextFill(Color.WHITE);

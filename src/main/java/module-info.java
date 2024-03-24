@@ -1,4 +1,4 @@
-module com.alexosta.demo_004 {
+module com.alexosta.demo_ {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.media;
