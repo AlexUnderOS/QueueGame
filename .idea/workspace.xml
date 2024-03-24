@@ -4,26 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f2108ba-04b9-4815-ae1b-e26c9b6de767" name="Changes" comment="new commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/ClassStudents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/CountdownTimer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/WinnerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/Scores.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/imgs/back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/imgs/people/defaultStudent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/imgs/people/happyStudent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/imgs/people/sadStudent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/styles.css" afterDir="false" />
+    <list default="true" id="2f2108ba-04b9-4815-ae1b-e26c9b6de767" name="Changes" comment="demo fart">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/test_sorting.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/ClassStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/ClassStudents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/MenuController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/QueueGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/QueueGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/Dialogues.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/Dialogues.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/game-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/game-scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/imgs/people/defaultPeople.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/imgs/people/happyPeople.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/imgs/people/sadPeople.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/menu-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/winner-scene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alexosta/demo_004/WinnerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/alexosta/demo_004/winner-scene.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,23 +46,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.QueueGame.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/AlexOsta/Documents/~Programming/_JavaFX/demo_004/src/main/resources/com/alexosta/demo_004",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.QueueGame.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AlexOsta/Documents/~Programming/_JavaFX/demo_004/src/main/resources/com/alexosta/demo_004&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.alexosta.demo_004" />
@@ -83,11 +71,11 @@
       <recent name="C:\Users\AlexOsta\Documents\~Programming\_JavaFX\demo_004\src\main\resources\com\alexosta\demo_004" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AlexOsta\Documents\~Programming\_JavaFX\demo_004\src\main\resources\com\alexosta\demo_004" />
       <recent name="C:\Users\AlexOsta\Documents\~Programming\_JavaFX\demo_004\src\main\resources\com\alexosta\demo_004\imgs\" />
       <recent name="C:\Users\AlexOsta\Documents\~Programming\_JavaFX\demo_004\src\main\resources\com\alexosta\demo_004\audio" />
       <recent name="C:\Users\AlexOsta\Documents\~Programming\_JavaFX\demo_004\src\main\resources\com\alexosta\demo_004\imgs" />
       <recent name="C:\Users\AlexOsta\Documents\~Programming\_JavaFX\demo_004\src\main\resources\com\alexosta\demo_004\img" />
-      <recent name="C:\Users\AlexOsta\Documents\~Programming\_JavaFX\demo_004\src\main\resources\com\alexosta\demo_004" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.alexosta.demo_004" />
@@ -110,12 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710974504937</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="demo fart">
+      <option name="closed" value="true" />
+      <created>1711072245752</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711072245752</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="new commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="new commit" />
+    <MESSAGE value="demo fart" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo fart" />
   </component>
 </project>

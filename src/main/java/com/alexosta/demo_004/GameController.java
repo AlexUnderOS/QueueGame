@@ -1,19 +1,13 @@
 package com.alexosta.demo_004;
 
 import javafx.animation.*;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.BufferedReader;
@@ -53,13 +47,6 @@ public class GameController {
 
     @FXML
     private Button trueAnswBtn, falseAnswBtn;
-
-    @FXML
-    private Label rezultLabel;
-    @FXML
-    private Label maxRezultLabel;
-    @FXML
-    private ImageView backImageView;
 
     private final String SCORES_FILE_PATH = "com/alexosta/demo_004/Scores.txt";
 

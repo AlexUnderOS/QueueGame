@@ -81,7 +81,7 @@ public class QueueGame extends Application {
         int maxStudents = 10 + (currentLevel - 1) * 5;
 
         for (int i = 0; i < maxStudents; i++) {
-            String studentName = getRandomLineFromDoc(readLinesFromResource("Students.txt"));
+            String studentName = getRandomLineFromDoc(readLinesFromResource("test_sorting.txt"));
             ClassStudents student = new ClassStudents(studentName);
             students.offer(student);
         }
@@ -94,6 +94,7 @@ public class QueueGame extends Application {
     private ClassStudents getCurrentStudent() {
         return students.peek();
     }
+
     private void handleAnswer(boolean isCorrect, GameController controller) {
         if (isCorrect) {
             playAudio("audio/happyPerson.wav", false, true, 0.2);
@@ -160,11 +161,14 @@ public class QueueGame extends Application {
 
         Operation operation = Operation.values()[rand.nextInt(Operation.values().length)];
 
-        int result = 0;
+        int tmpResult = 0;
+        double tmpDivisionResult = 0;
+        String finalResult = "";
+        boolean haveDivision = false;
 
         switch (operation) {
             case ADDITION:
-                result = a + b;
+                tmpResult = a + b;
                 break;
             case SUBTRACTION:
                 if (a < b) {
@@ -172,27 +176,48 @@ public class QueueGame extends Application {
                     a = b;
                     b = temp;
                 }
-                result = a - b;
+                tmpResult = a - b;
                 break;
             case MULTIPLICATION:
-                result = a * b;
+                tmpResult = a * b;
                 break;
             case DIVISION:
-                if (b != 0) {
-                    result = (int) ((double) a / b);
-                } else {
-                    result = 999;
+                if (a < b){
+                    int tmp = b;
+                    b = a;
+                    a = tmp;
                 }
+
+                if ((a % b) > 0){
+                    tmpDivisionResult = (double) a / b;
+                    haveDivision = true;
+                }else{
+                    tmpResult = a / b;
+                }
+
                 break;
         }
 
         trueAnsw = getRandomBoolean();
         if (!trueAnsw){
-            int randResult = rand.nextInt(Math.max(1, result)) + 5;
-            result = randResult;
+            if (!haveDivision){
+                tmpResult = rand.nextInt(Math.max(1, tmpResult)) + 5;
+                finalResult = Integer.toString(tmpResult);
+            }else {
+                tmpDivisionResult = rand.nextInt(1) + 5;
+                finalResult = Double.toString(tmpDivisionResult);
+            }
+        }else{
+            if (!haveDivision){
+                finalResult = Integer.toString(tmpResult);
+            }else {
+                finalResult = Double.toString(tmpDivisionResult);
+            }
         }
 
-        return String.format("%d %s %d = %d", a, operation.getSymbol(), b, result);
+
+
+        return String.format("%d %s %d = %s", a, operation.getSymbol(), b, finalResult);
     }
 
     public void playAudio(String fileName, boolean isLooped, boolean isShortSound, double volume) {
